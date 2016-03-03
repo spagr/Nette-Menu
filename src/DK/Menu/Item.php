@@ -666,7 +666,7 @@ class Item extends Container
 	public function isActive()
 	{
 		if ($this->active === null) {
-			if (!$this->isAllowed() || $this->hasAbsoluteTarget()) {
+			if (!$this->isAllowed() || $this->hasAbsoluteTarget() || $this->isAbsolute()) {
 				$this->active = false;
 			} else {
 				$presenter = $this->getMenu()->getPresenter();
